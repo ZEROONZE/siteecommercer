@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    padding: 0;
+    width: auto;  
+   }
+ 
+ code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/************************ menu***************************/ 
+ nav {
+  width: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  float: left;
+ }
+ 
+  .menu {
+  list-style: none;
+  padding: 0.7rem;
+  float: left;
+  position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu li {
+    position: relative;
+   float: left;
+
+
+   }
+   .menu ul {
+   list-style: none; /*Remover bolinhas */
+   }
+  
+   .menu li a {
+   text-decoration: none; /*remover linhas menu*/
+   color:rgb(0, 0, 0);
+   padding:7px 20px;
+   border: 1px;
+   font-weight: bold;
+   font-size: 24px;
+  
+    }
+    .menu li  .home {
+    color: rgb(235, 115, 68);
+ 
+    }
+
+    .menu li a:hover {
+    
+    color: rgb(235, 115, 68);
+    margin: 1px;
+
+    border: 0;
+    }
+
+    .menu li  ul {
+      position:absolute;
+      top:18px;
+      left: 0;
+      display:none;
+      
+    }
+   /******* hover *******/
+
+    .menu li:hover ul, .menu li.over ul {
+    display: block;
+    }
+
+  /************************ menu***************************/
+
+
+  /************************ Submenu***************************/
+    .submenu {
+      position:absolute;
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+      color: #ffff;
+      margin: 10px;
+      padding: auto;
+      padding-bottom: 8px;
+      border-bottom-left-radius: 17px;
+      border-top-right-radius: 27px;
+
+    }
+
+    .submenu li a {
+      color: rgb(255, 255, 255);
+      font-size: 11px;
+      white-space: nowrap; /*Alinhas linhas*/
+      padding-bottom: 14px;
+      cursor: pointer;
+    }
+
+   /******* hover *******/
+    .submenu a:hover {
+      margin: 1%;
+      color: rgb(235, 115, 68);
+      font-weight: bold;
+
+    }
+
+  /************************ Submenu ***************************/
+
+
+  /************************ barra de pesqeuisa ***************************/
+    #divBusca {
+     margin-left: 75%;
+     top:-30px;
+     border-radius:15px;
+     position: relative;
+    
+    }
+    
+    #txtBusca {
+    float:left;
+    border-radius: 19px;
+    position: relative;
+    padding-left:5px;
+    font-style:italic;
+    font-size:12px;
+    border:none;
+    height:22px;
+    width:75%;  /*Tamanaho da barra de pesquisa*/
+    background-color: rgb(201, 199, 199)
+    }
+
+    .buscar{
+    left: 0%;
+    }
+    #btnBusca{
+    position: relative;
+    margin: 2px;
+    padding-left: 2px;
+    top: -2px;
+    cursor: pointer;
+    white-space: nowrap;
+    } 
+
+  /************************ barra de pesqeuisa ***************************/
+  /************************ Slider ***************************/
+  .Slide{
+    height: 100%;
+    width: 100%;
   }
-}
+
+  /************************ Slider ***************************/
+
+  /************************ PRODUTOS ***************************/
+  .vendas{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    padding-top: 60px;
+    }
+
+    .card {
+    
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        border-radius: 40px;
+       cursor: pointer;
+      }
+      
+      .price {
+        color: rgb(4, 136, 63);
+        font-size: 22px;
+        font-family: 'Poppins';
+        font-weight: bold;
+        cursor: pointer;
+      }
+      p{
+        color: rgb(4, 136, 63);
+        cursor: pointer;
+      }
+      .price2, p{
+        font-family: 'Poppins';
+        color: rgb(5, 110, 151);
+        cursor: pointer;
+      }
+      
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 19px;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      #btn{
+        border-radius: 20px;
+      }
+
+    
+      .card button:hover {
+        opacity: 0.7;
+        background-color: green;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      footer{
+        bottom: 50px;
+        margin-top: 100px;
+      }
+
+
+      .vendas{
+          margin: 10px;
+      }
+    /************************ PRODUTOS ***************************/
